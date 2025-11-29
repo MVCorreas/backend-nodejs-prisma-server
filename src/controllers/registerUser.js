@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs"; //passwords are encrypted for security. This is irreversible, if we want to compare a user when logging to the user in the database, basically we encrypt the password again using the same algorithm which will return the same output
 import jwt from "jsonwebtoken";
-import prisma from "../prisma-client.js";
+import { prisma } from "../lib/prisma.js"
 
 const registerUser = async (req, res) => {
   const { username, password } = req.body;
