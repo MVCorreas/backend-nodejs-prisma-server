@@ -17,9 +17,9 @@ Content-Type: application/json
 }
 
 GET http://localhost:3001/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0MjgxMjAyLCJleHAiOjE3NjQzNjc2MDJ9.GJIlsGusVcUYTVp1Xt0I0noA1hAqLpqt3XeR6-8ua8g
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY0NDU0OTQ4LCJleHAiOjE3NjQ1NDEzNDh9.1p988GcEuY0O7EG8gIKVINV1wr68HU-J6gj4PnvTJnA
 POST http://localhost:3001/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0MjgxMjAyLCJleHAiOjE3NjQzNjc2MDJ9.GJIlsGusVcUYTVp1Xt0I0noA1hAqLpqt3XeR6-8ua8g
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY0NDU0OTQ4LCJleHAiOjE3NjQ1NDEzNDh9.1p988GcEuY0O7EG8gIKVINV1wr68HU-J6gj4PnvTJnA
 Content-Type: application/json
 {
     "task": "Clean Clothes"
