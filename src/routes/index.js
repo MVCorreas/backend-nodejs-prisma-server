@@ -1,9 +1,10 @@
 import express from "express";
 import authRouter from "./authRouter.js";
+import todoRouter from "./todoRouter.js";
 
-const router = express.Router()
-
+const router = express.Router();
 
 router.use("/auth", authRouter);
+router.use("/todos", todoRouter);
 
 export default router;
