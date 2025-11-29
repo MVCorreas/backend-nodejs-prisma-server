@@ -1,0 +1,36 @@
+# Configuration sheet used for projects that use numerous containers or environments
+
+version: "3"
+services:
+  app:
+    build: .
+    container_name: todo-app
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@localhost:51214/template1?sslmode=disable
+      - JWT_SECRET=thisismybasckendserversecrettest
+      - NODE_ENV=development
+      - PORT=3001
+    ports:
+      # here we map or match the external port to the internal port
+      - "3001:3001"
+    depends_on:
+      - db
+    # creates a storage or record of our server, so if we shut down and reboot we can start from
+    # where we were before. Otherwise, if we didnt specify volumes, the container starts like a blank page, and the app doenst remember
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:13-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: template1?sslmode=disable
+    ports:
+      - "51214:51214"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

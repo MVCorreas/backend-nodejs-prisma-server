@@ -1,3 +1,5 @@
+# Configuration sheet for a single container
+
 #We  use an official node js runtime as a parent image. Image is like a snapshot of the environment, so when we run the container, the container loads to the exact image of the environment
 FROM node:22-alpine
 
