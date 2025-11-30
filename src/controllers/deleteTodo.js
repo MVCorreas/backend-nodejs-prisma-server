@@ -1,4 +1,4 @@
-import { prisma } from "../lib/prisma";
+import { prisma } from "../lib/prisma.js";
 
 const deleteTodo = async (req, res) => {
   const { id } = req.params;
